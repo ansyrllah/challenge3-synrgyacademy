@@ -1,13 +1,27 @@
 function sortCarByYearAscendingly(cars) {
-  // Sangat dianjurkan untuk console.log semua hal hehe
-  console.log(cars);
+    // Sangat dianjurkan untuk console.log semua hal hehe
+    console.log(cars);
 
-  // Clone array untuk menghindari side-effect
-  // Apa itu side effect?
-  const result = [...cars];
+    // Clone array untuk menghindari side-effect
+    // Apa itu side effect?
+    // const result = [...cars];
 
-  // Tulis code-mu disini
+    // Tulis code-mu disini
 
-  // Rubah code ini dengan array hasil sorting secara ascending
-  return result;
+    for (let i = 0; i < cars.length; i++) {
+        let current = cars[i];
+        let j = i - 1;
+
+        while (j >= 0 && cars[j].year > current.year) {
+            cars[j + 1] = cars[j];
+            j--;
+        }
+        cars[j + 1] = current;
+    }
+    console.log(cars);
+
+    const result = [...cars];
+
+    // Rubah code ini dengan array hasil sorting secara ascending
+    return result;
 }
