@@ -1,6 +1,6 @@
 function sortCarByYearDescendingly(cars) {
     // Sangat dianjurkan untuk console.log semua hal hehe
-    // console.log(cars);
+    // console.log(cars); 
 
     // Tulis code-mu disini
     // insertion sorting algorithm
